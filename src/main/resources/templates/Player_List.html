@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>Player List</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header th:replace="fragments :: header('Player List')"></header>
+<article class="contentDiv">
+  <ul th:if="${playernames != null}">
+    <li th:each="string : ${playernames}">
+      <span th:text="${string}"></span>
+    </li>
+  </ul>
+</article>
+</body>
+</html>

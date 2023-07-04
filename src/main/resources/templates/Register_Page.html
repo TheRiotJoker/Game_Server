@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header th:replace="fragments :: header('Registration Page')"> </header>
+<div class="contentDiv">
+  <form action="playerRegistration" method="POST">
+      <p>Your Username:</p>
+      <input type="text" name="username" class="inputField"><br>
+      <p>Your Password:</p>
+      <input type="password" name="password" class="inputField"><br>
+    <input type="submit" value="Register!" id="sendButton">
+  </form>
+</div>
+</body>
+</html>
